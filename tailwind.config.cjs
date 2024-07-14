@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
@@ -20,7 +20,7 @@ module.exports = {
                 main: 'rgb(var(--color-border-main) / <alpha-value>)'
             },
             typography: (theme) => ({
-                dante: {
+                k9t: {
                     css: {
                         '--tw-prose-body': theme('textColor.main / 100%'),
                         '--tw-prose-headings': theme('textColor.main / 100%'),
@@ -82,4 +82,4 @@ module.exports = {
         }
     },
     plugins: [require('@tailwindcss/typography')]
-};
+}

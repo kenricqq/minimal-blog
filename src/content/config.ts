@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content'
 
 const seoSchema = z.object({
     title: z.string().min(5).max(120).optional(),
@@ -10,7 +10,7 @@ const seoSchema = z.object({
         })
         .optional(),
     pageType: z.enum(['website', 'article']).default('website')
-});
+})
 
 const blog = defineCollection({
     schema: z.object({
@@ -22,14 +22,14 @@ const blog = defineCollection({
         tags: z.array(z.string()).default([]),
         seo: seoSchema.optional()
     })
-});
+})
 
 const pages = defineCollection({
     schema: z.object({
         title: z.string(),
         seo: seoSchema.optional()
     })
-});
+})
 
 const projects = defineCollection({
     schema: z.object({
@@ -39,6 +39,6 @@ const projects = defineCollection({
         isFeatured: z.boolean().default(false),
         seo: seoSchema.optional()
     })
-});
+})
 
-export const collections = { blog, pages, projects };
+export const collections = { blog, pages, projects }
