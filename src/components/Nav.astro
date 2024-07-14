@@ -1,9 +1,9 @@
 ---
-import NavLink from './NavLink.astro';
-import ThemeToggle from './ThemeToggle.astro';
-import siteConfig from '../data/site-config';
+import NavLink from './NavLink.astro'
+import ThemeToggle from './ThemeToggle.astro'
+import siteConfig from '../data/site-config'
 
-const navLinks = siteConfig.headerNavLinks || [];
+const navLinks = siteConfig.headerNavLinks || []
 ---
 
 <nav class="min-h-10 pt-4 pb-12 relative sm:min-h-14 sm:pb-24 md:pt-8">
@@ -87,16 +87,16 @@ const navLinks = siteConfig.headerNavLinks || [];
 
 <script>
     function menuToggle() {
-        const menu = document.querySelector('.menu');
-        const menuToggleBtn = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu')
+        const menuToggleBtn = document.querySelector('.menu-toggle')
         menuToggleBtn?.addEventListener('click', () => {
-            const isMenuExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
-            menuToggleBtn.classList.toggle('is-active');
-            menuToggleBtn.setAttribute('aria-expanded', isMenuExpanded ? 'false' : 'true');
-            menuToggleBtn.setAttribute('aria-label', isMenuExpanded ? 'Open Menu' : 'Close Menu');
-            menu?.classList.toggle('is-visible');
-        });
+            const isMenuExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true'
+            menuToggleBtn.classList.toggle('is-active')
+            menuToggleBtn.setAttribute('aria-expanded', isMenuExpanded ? 'false' : 'true')
+            menuToggleBtn.setAttribute('aria-label', isMenuExpanded ? 'Open Menu' : 'Close Menu')
+            menu?.classList.toggle('is-visible')
+        })
     }
-    menuToggle();
-    document.addEventListener('astro:after-swap', menuToggle);
+    menuToggle()
+    document.addEventListener('astro:after-swap', menuToggle)
 </script>
