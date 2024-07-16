@@ -1,10 +1,14 @@
 ## ok
-starlight
 
 ## to be done
 
+astrodb: GUI to CRUD blogs / projects
+
+- maybe create schemas
+
 shadcn-svelte
-astrodb
 
 ## later
+
 lucia-auth
+pagefind

@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import starlight from '@astrojs/starlight'
 
 import svelte from '@astrojs/svelte'
 
@@ -13,20 +12,6 @@ export default defineConfig({
         sitemap(),
         tailwind({
             applyBaseStyles: false
-        }),
-        starlight({
-            title: 'Doc Site',
-            sidebar: [
-                // {
-                //     label: 'Guides',
-                //     items: [{ label: 'Example Guide', slug: 'guides/example' }]
-                // },
-                // {
-                //     label: 'Reference',
-                //     autogenerate: { directory: 'reference' }
-                // }
-            ],
-            customCss: ['./src/styles/global.css']
         }),
         mdx(),
         svelte()
