@@ -63,8 +63,8 @@ const siteConfig: SiteConfig = {
             href: '/tags'
         },
         {
-            text: 'Docs',
-            href: '/docs'
+            text: 'CMS',
+            href: '/cms'
         }
     ],
     footerNavLinks: [
