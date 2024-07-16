@@ -1,29 +1,31 @@
 {
-    "name": "svelte-blog",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro",
-        "format": "prettier --write ."
-    },
-    "dependencies": {
-        "@astrojs/mdx": "^3.1.2",
-        "@astrojs/rss": "^4.0.7",
-        "@astrojs/sitemap": "^3.1.6",
-        "@astrojs/tailwind": "^5.1.0",
-        "astro": "^4.11.5",
-        "marked": "^13.0.2",
-        "tailwindcss": "^3.4.4"
-    },
-    "devDependencies": {
-        "@tailwindcss/typography": "^0.5.13",
-        "prettier": "^3.3.3",
-        "prettier-plugin-svelte": "^3.2.5",
-        "prettier-plugin-astro": "^0.14.0",
-        "prettier-plugin-tailwindcss": "^0.6.5"
-    }
+  "name": "svelte-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.1.2",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/starlight": "^0.25.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.11.5",
+    "caniuse-lite": "^1.0.30001642",
+    "marked": "^13.0.2",
+    "tailwindcss": "^3.4.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.5",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.5"
+  }
 }

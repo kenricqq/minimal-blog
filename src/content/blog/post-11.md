@@ -3,12 +3,12 @@ title: The Ultimate Front-End Developer Career Roadmap
 excerpt: Are you interested in embarking on a rewarding career as a front-end developer or looking to advance your existing skills in this dynamic field?
 publishDate: 'Dec 15 2023'
 tags:
-    - Web
-    - Guide
+  - Web
+  - Guide
 seo:
-    image:
+  image:
     src: '/post-11.jpg'
-        alt: Empty road into the Horizon
+    alt: Empty road into the Horizon
 ---
 
 ![Empty road into the Horizon](/post-11.jpg)

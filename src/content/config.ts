@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content'
+import { docsSchema } from '@astrojs/starlight/schema'
 
 const seoSchema = z.object({
     title: z.string().min(5).max(120).optional(),
@@ -41,4 +42,9 @@ const projects = defineCollection({
     })
 })
 
-export const collections = { blog, pages, projects }
+export const collections = {
+    blog,
+    pages,
+    projects,
+    docs: defineCollection({ schema: docsSchema() })
+}

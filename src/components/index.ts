@@ -14,4 +14,4 @@ import ProjectPreview from './ProjectPreview.astro'
 import Subscribe from './Subscribe.astro'
 import ThemeToggle from './ThemeToggle.astro'
 
-export { Nav, NavLink, Pagination, PostPreview, Subscribe }
+export { BaseHead, Button, Footer, FormattedDate, Header, Hero, IconButton, Nav, NavLink, Pagination, PostPreview, ProjectPreview, Subscribe, ThemeToggle }
