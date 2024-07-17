@@ -1,10 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { db, Blog } from 'astro:db'
 import { Button, Hero, PostPreview, ProjectPreview } from '@components/.'
+
+if (Astro.request.method === 'POST') {
+    const formData = await Astro.request.formData()
+    const title = formData.get('title')
+    const description = formData.get('description')
+    if (typeof title === 'string' && typeof description === 'string') {
+        await db.insert(Blog).values({ title, description })
+    }
+}
+
+const blogs = await db.select().from(Blog)
 ---
 
 <BaseLayout showHeader={false}>
-    <div class="border-2 border-blue-300">
-        you
+    <div class="p-3 border-2 rounded-lg">
+        {
+            blogs.map((blog) => (
+                <h1>
+                    {blog.title}: {blog.description}
+                </h1>
+            ))
+        }
     </div>
+
+    <form method="POST" style="display: grid">
+        <label for="title">Title</label>
+        <input id="title" name="title" class="text-slate-800" />
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
 </BaseLayout>
