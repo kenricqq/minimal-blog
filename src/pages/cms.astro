@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { db, Blog } from 'astro:db'
-import { Button, Hero, PostPreview, ProjectPreview } from '@components/.'
+import { Button, FeedbackForm, Hero, PostPreview, ProjectPreview } from '@components/.'
 
 if (Astro.request.method === 'POST') {
     const formData = await Astro.request.formData()
@@ -28,11 +28,15 @@ const blogs = await db.select().from(Blog)
 
     <form method="POST" style="display: grid">
         <label for="title">Title</label>
-        <input id="title" name="title" class="text-slate-800" />
+        <input id="title" name="title" required class="text-slate-800" />
 
         <label for="description">Description</label>
         <textarea id="description" name="description"></textarea>
 
         <button type="submit">Submit</button>
     </form>
+
+    <FeedbackForm client:load />
+
+    <button class="bg-blue-800 rounded-lg px-5 py-3">Clear all</button>
 </BaseLayout>
