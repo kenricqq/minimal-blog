@@ -4,7 +4,9 @@
         "strictNullChecks": true,
         "baseUrl": ".",
         "paths": {
-            "@components/*": ["src/components/*"]
+            "@components/*": ["src/components/*"],
+            "$lib/*": ["./src/*"],
+            "$ui/*": ["./src/components/ui/*"]
         }
     }
 }

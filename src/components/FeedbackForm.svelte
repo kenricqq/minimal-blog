@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { Button, Input } from '$ui/.'
+
     let responseMessage: string
 
     async function submit(e: SubmitEvent) {
@@ -26,6 +28,7 @@
         Message
         <textarea id="message" name="message" required />
     </label>
+    <Input></Input>
     <button>Send</button>
     {#if responseMessage}
         <p>{responseMessage}</p>
