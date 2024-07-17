@@ -1,6 +1,5 @@
 import BaseHead from './Seo.astro'
 import Button from './Button.astro'
-import GuidePreview from './GuidePreview.astro'
 import Footer from './Footer.astro'
 import FormattedDate from './FormattedDate.astro'
 import Header from './home/Header.astro'
@@ -18,7 +17,6 @@ import ThemeToggle from './ThemeToggle.astro'
 export {
     BaseHead,
     Button,
-    GuidePreview,
     Footer,
     FormattedDate,
     Header,
